@@ -70,7 +70,7 @@ st.markdown("<h3 style='color:#FF9F1C;'>Servicios de Enfermería en General</h3>
 # 2. Imagen Principal desde internet
 imagen_url = "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 # 2. Imagen Principal desde tu PC
-st.image(imagen_url, use_container_width=True)
+st.image("IMG_1234.JPG.jpg", use_container_width=True)
 st.write("Atención profesional, cálida y especializada. Tu salud en las mejores manos.")
 
 # 3. Menú Lateral
