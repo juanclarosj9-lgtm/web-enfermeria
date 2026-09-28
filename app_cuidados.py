@@ -305,22 +305,23 @@ elif opcion == "Agendar Cita":
             st.markdown(f'<a href="mailto:ecissalud@gmail.com?subject=Cita de {nombre}&body=Hola, soy {nombre}, teléfono: {telefono}, servicio: {servicio}">Haz clic aquí para enviar el correo</a>', unsafe_allow_html=True)
 
 # --- UBICACIÓN EXACTA ---
+# --- UBICACIÓN EXACTA + CONTACTO ---
 elif opcion == "Ubicación Exacta":
     st.header("📍 Nuestra Ubicación")
     st.write("**Dirección:** Sta Fe Este 10, San Juan Capital")
-    st.write("**Código Postal:** J54002AAB")
-    
+    st.write("**Código Postal:** J5402AAB")
 
-# --- BUSCADOR DE SALUD ---
-elif opcion == "Buscador de Salud":
-    st.header("🔍 Investigador Médico")
-    st.info("Investiga en fuentes confiables al instante.")
-    
-    termino = st.text_input("Escribe tu consulta (ej: Diabetes, Hipertensión):")
-    
-    if st.button("🔎 Buscar Recomendaciones"):
-        if termino:
-            st.success(f"Abriendo búsqueda para: **{termino}**...")
-            st.markdown(f'[**Ver resultados de Salud**](https://www.google.com/search?q={termino}+recomendaciones+OMS+enfermeria)')
-        else:
-            st.warning("Por favor, escribe algo para buscar.")
+    st.divider()
+    st.subheader("📱 Contactanos")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(
+            '[**💬 Escribinos por WhatsApp**](https://wa.me/5492645115399)',
+            unsafe_allow_html=True
+        )
+    with col2:
+        st.markdown(
+            '[**✉️ Envianos un email**](mailto:ecissalud@gmail.com)',
+            unsafe_allow_html=True
+        )
