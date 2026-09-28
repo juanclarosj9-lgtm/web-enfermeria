@@ -14,13 +14,69 @@ st.set_page_config(
 st.markdown("""
 <style>
     :root {
-        --primary-color: #20c997;
-        --secondary-color: #FF9F1C;
+        --verde: #2E7D32;
+        --verde-oscuro: #1B5E20;
+        --naranja: #F7941D;
+        --naranja-claro: #FFA940;
+        --fondo: #F4FAF5;
     }
-    .stButton>button {
-        background-color: var(--secondary-color);
+
+    /* Fondo general */
+    .stApp {
+        background-color: var(--fondo);
+    }
+
+    /* Título principal en degradado verde-naranja */
+    h1 {
+        color: var(--verde);
+        font-weight: 800;
+    }
+    h2, h3 {
+        color: var(--verde-oscuro);
+    }
+
+    /* Botones naranjas */
+    .stButton > button {
+        background: linear-gradient(90deg, var(--naranja), var(--naranja-claro));
         color: white;
         font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        padding: 0.6rem 1.2rem;
+        transition: all 0.3s ease;
+    }
+    .stButton > button:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 12px rgba(247, 148, 29, 0.4);
+        color: white;
+    }
+
+    /* Menú lateral verde */
+    [data-testid="stSidebar"] {
+        background-color: var(--verde);
+    }
+    [data-testid="stSidebar"] * {
+        color: white !important;
+    }
+
+    /* Cajas de éxito/info coordinadas */
+    .stSuccess {
+        background-color: #E8F5E9;
+        border-left: 5px solid var(--verde);
+        color: var(--verde-oscuro);
+    }
+    .stInfo {
+        background-color: #FFF3E0;
+        border-left: 5px solid var(--naranja);
+        color: #E65100;
+    }
+
+    /* Expanders (catálogo de servicios) */
+    .streamlit-expanderHeader {
+        background-color: #E8F5E9;
+        color: var(--verde-oscuro) !important;
+        font-weight: bold;
+        border-radius: 8px;
     }
 </style>
 """, unsafe_allow_html=True)
