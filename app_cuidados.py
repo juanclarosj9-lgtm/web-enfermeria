@@ -282,11 +282,10 @@ elif opcion == "Quiz Interactivo":
 elif opcion == "Agendar Cita":
     st.header("📅 Agenda tu Cita")
     st.info("Selecciona el servicio que necesitas para que el equipo de C.I.S. te prepare.")
-    
+
     nombre = st.text_input("Nombre Completo")
     telefono = st.text_input("Teléfono")
-    
-    # Nuevo menú de servicios actualizado
+
     lista_servicios = [
         "1. Cuidados de higiene y confort",
         "2. Enfermería de alta complejidad",
@@ -297,12 +296,28 @@ elif opcion == "Agendar Cita":
         "7. Servicios especializados",
         "8. Gestión y coordinación"
     ]
-    
     servicio = st.selectbox("Servicio de interés:", lista_servicios)
-    
+
     if st.button("📧 Enviar Solicitud"):
         if nombre and telefono:
-            st.markdown(f'<a href="mailto:ecissalud@gmail.com?subject=Cita de {nombre}&body=Hola, soy {nombre}, teléfono: {telefono}, servicio: {servicio}">Haz clic aquí para enviar el correo</a>', unsafe_allow_html=True)
+            mensaje = f"Hola, soy {nombre}, teléfono: {telefono}, servicio: {servicio}"
+
+            st.success(f"Gracias **{nombre}**. Elegiste: **{servicio}**")
+            st.write("Elegí cómo querés enviar la solicitud:")
+
+            colA, colB = st.columns(2)
+            with colA:
+                st.markdown(
+                    f'[**✉️ Enviar por Email**](mailto:ecissalud@gmail.com?subject=Cita%20de%20{nombre}&body={mensaje})',
+                    unsafe_allow_html=True
+                )
+            with colB:
+                st.markdown(
+                    f'[**💬 Enviar por WhatsApp**](https://wa.me/5492645115399?text={mensaje})',
+                    unsafe_allow_html=True
+                )
+        else:
+            st.warning("Por favor completá nombre y teléfono.")
 
 # --- UBICACIÓN EXACTA ---
 # --- UBICACIÓN EXACTA + CONTACTO ---
