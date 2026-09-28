@@ -340,3 +340,16 @@ elif opcion == "Ubicación Exacta":
             '[**✉️ Envianos un email**](mailto:ecissalud@gmail.com)',
             unsafe_allow_html=True
         )
+# --- BUSCADOR DE SALUD ---
+elif opcion == "Buscador de Salud":
+    st.header("🔍 Investigador Médico")
+    st.info("Investiga en fuentes confiables al instante.")
+    
+    termino = st.text_input("Escribe tu consulta (ej: Diabetes, Hipertensión):")
+    
+    if st.button("🔎 Buscar Recomendaciones"):
+        if termino:
+            st.success(f"Abriendo búsqueda para: **{termino}**...")
+            st.markdown(f'[**Ver resultados de Salud**](https://www.google.com/search?q={termino}+recomendaciones+OMS+enfermeria)')
+        else:
+            st.warning("Por favor, escribe algo para buscar.")
