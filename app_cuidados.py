@@ -308,7 +308,7 @@ elif opcion == "Agendar Cita":
 elif opcion == "Ubicación Exacta":
     st.header("📍 Nuestra Ubicación")
     st.write("**Dirección:** Sta Fe Este 10, San Juan Capital")
-    st.write("**Código Postal:** J5402AAB")
+    st.write("**Código Postal:** J54002AAB")
     
 
 # --- BUSCADOR DE SALUD ---
