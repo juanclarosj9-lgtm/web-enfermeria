@@ -108,6 +108,25 @@ st.markdown("""
     .stApp ol li {
         color: #1a1a1a !important;
     }
+        /* Excepción: texto negro en inputs y placeholders */
+    .stApp input,
+    .stApp textarea,
+    .stApp [data-testid="stTextInput"] input,
+    .stApp [data-testid="stTextInput"] label,
+    .streamlit-expanderContent input,
+    .streamlit-expanderContent textarea {
+        color: #000000 !important;
+    }
+
+    /* Placeholder (texto gris claro dentro del input) */
+    .stApp input::placeholder,
+    .stApp textarea::placeholder {
+        color: #666666 !important;
+    }
+        /* Placeholder específico */
+    [data-testid="stTextInput"] input::placeholder {
+        color: #888888 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
