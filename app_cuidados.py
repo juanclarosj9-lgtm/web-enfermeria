@@ -156,7 +156,7 @@ opcion = st.sidebar.radio(
 # --- SECCIÓN: INICIO ---
 if opcion == "Inicio":
     st.header("Por qué Elegirnos")
-    st.info("Promovemos Bienestar, Prevenimos Enfermedades y Acompañamos tu Recuperación.")
+    st.info("Cuidamos tu salud, promovemos tu bienestar y te acompañamos en cada etapa.")
     
     # Aquí puedes dejar las columnas de "Por qué elegirnos" o borrarlas si prefieres
     col1, col2, col3 = st.columns(3)
