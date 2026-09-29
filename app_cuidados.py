@@ -127,6 +127,41 @@ st.markdown("""
     [data-testid="stTextInput"] input::placeholder {
         color: #888888 !important;
     }
+    /* Forzar fondo blanco y texto negro en inputs y labels del contenido */
+    .stApp [data-testid="stTextInput"],
+    .stApp [data-testid="stNumberInput"],
+    .stApp [data-testid="stSelectbox"],
+    .stApp [data-testid="stTextArea"] {
+        background-color: white !important;
+    }
+
+    .stApp [data-testid="stTextInput"] label,
+    .stApp [data-testid="stNumberInput"] label,
+    .stApp [data-testid="stSelectbox"] label,
+    .stApp [data-testid="stTextArea"] label {
+        color: #1a1a1a !important;
+    }
+
+    .stApp [data-testid="stTextInput"] input,
+    .stApp [data-testid="stNumberInput"] input,
+    .stApp [data-testid="stSelectbox"] select,
+    .stApp [data-testid="stTextArea"] textarea {
+        color: #1a1a1a !important;
+        background-color: white !important;
+    }
+
+    /* Forzar fondo blanco en el contenedor de inputs */
+    .stApp [data-testid="stTextInput"] > div,
+    .stApp [data-testid="stNumberInput"] > div,
+    .stApp [data-testid="stTextArea"] > div {
+        background-color: white !important;
+    }
+
+    /* Texto de placeholder gris */
+    .stApp input::placeholder,
+    .stApp textarea::placeholder {
+        color: #888888 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
