@@ -55,7 +55,13 @@ st.markdown("""
     [data-testid="stSidebar"] {
         background-color: var(--verde);
     }
-    [data-testid="stSidebar"] * {
+    [data-testid="stSidebar"] .stSidebarHeader,
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] span,
+    [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
         color: white !important;
     }
 
@@ -90,6 +96,17 @@ st.markdown("""
     /* Asegurar texto negro en todo el contenido principal */
     .stApp [data-testid="stMarkdownContainer"] p {
         color: #1a1a1a;
+    }
+     .stApp [data-testid="stMarkdownContainer"] *,
+    .stApp p,
+    .stApp div {
+        color: #1a1a1a !important;
+    }
+
+    /* Asegurar que los marcadores (bullets) también sean negros */
+    .stApp ul li,
+    .stApp ol li {
+        color: #1a1a1a !important;
     }
 </style>
 """, unsafe_allow_html=True)
