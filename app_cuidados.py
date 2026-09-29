@@ -78,6 +78,19 @@ st.markdown("""
         font-weight: bold;
         border-radius: 8px;
     }
+        /* Lista de servicios en negro */
+    .streamlit-expanderContent p,
+    .streamlit-expanderContent li,
+    .streamlit-expanderContent ul,
+    [data-testid="stExpander"] details p,
+    [data-testid="stExpander"] details li {
+        color: #000000 !important;
+    }
+
+    /* Asegurar texto negro en todo el contenido principal */
+    .stApp [data-testid="stMarkdownContainer"] p {
+        color: #1a1a1a;
+    }
 </style>
 """, unsafe_allow_html=True)
 
