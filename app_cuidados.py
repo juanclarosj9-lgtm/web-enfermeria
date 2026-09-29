@@ -136,7 +136,7 @@ col_logo, col_titulo = st.columns([1, 4])
 with col_logo:
     st.image("logo.jpg", use_container_width=True, width=120)
 with col_titulo:
-    st.title("🌿 Cuidados Integrales de Salud")
+    st.title("Cuidados Integrales de Salud")
     st.markdown("<h3 style='color:#F7941D;'>Servicios de Enfermería en General</h3>", unsafe_allow_html=True)
 
 # Imagen del grupo (Usamos una de placeholder, cámbiala por tu foto real: "grupo_enfermeros.jpg")
