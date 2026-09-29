@@ -144,7 +144,11 @@ with col_titulo:
 imagen_url = "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 # 2. Imagen Principal desde tu PC
 st.image("IMG_1234.JPG.jpg", use_container_width=True)
-st.write("Atención profesional, cálida y especializada. Tu salud en las mejores manos. Solicitá una valoración de Enfermería. Contanos qué necesitás y te orientamos sobre el servicio adecuado.")
+st.write("Atención profesional, cálida y especializada. 
+Tu salud en las mejores manos. 
+Solicitá una valoración de Enfermería. 
+Contanos qué necesitás y te orientamos sobre el servicio adecuado."
+)
 
 # 3. Menú Lateral
 
