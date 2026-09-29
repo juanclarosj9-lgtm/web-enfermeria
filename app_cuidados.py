@@ -162,6 +162,29 @@ st.markdown("""
     .stApp textarea::placeholder {
         color: #888888 !important;
     }
+    /* Forzar fondo blanco en selectbox y textinput dentro del contenido */
+    .stApp div[data-baseweb="select"],
+    .stApp div[data-baseweb="input"] {
+        background-color: white !important;
+    }
+
+    /* Forzar texto negro en labels de selectbox y textinput */
+    .stApp label,
+    .stApp [data-testid="stMarkdownContainer"] label {
+        color: #1a1a1a !important;
+    }
+
+    /* Forzar fondo blanco en el contenedor de selectbox */
+    .stApp div[role="listbox"],
+    .stApp div[data-baseweb="select"] > div {
+        background-color: white !important;
+    }
+
+    /* Forzar texto negro en el texto seleccionado dentro del select */
+    .stApp div[data-baseweb="select"] span,
+    .stApp div[data-baseweb="select"] p {
+        color: #1a1a1a !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
