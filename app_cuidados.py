@@ -26,14 +26,9 @@ st.markdown("""
         background-color: var(--fondo);
     }
 
-    /* Título principal en degradado verde-naranja */
-    h1 {
-        color: var(--verde);
-        font-weight: 800;
-    }
-    h2, h3 {
-        color: var(--verde-oscuro);
-    }
+    /* Títulos */
+    h1 { color: var(--verde); font-weight: 800; }
+    h2, h3 { color: var(--verde-oscuro); }
 
     /* Botones naranjas */
     .stButton > button {
@@ -43,7 +38,6 @@ st.markdown("""
         border: none;
         border-radius: 10px;
         padding: 0.6rem 1.2rem;
-        transition: all 0.3s ease;
     }
     .stButton > button:hover {
         transform: scale(1.03);
@@ -51,13 +45,12 @@ st.markdown("""
         color: white;
     }
 
-    /* Menú lateral verde */
+    /* Menú lateral verde con texto blanco */
     [data-testid="stSidebar"] {
         background-color: var(--verde);
     }
     [data-testid="stSidebar"] .stSidebarHeader,
-    [data-testid="stSidebar"] h1,
-    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] p,
     [data-testid="stSidebar"] label,
     [data-testid="stSidebar"] span,
@@ -65,124 +58,53 @@ st.markdown("""
         color: white !important;
     }
 
-    /* Cajas de éxito/info coordinadas */
-    .stSuccess {
-        background-color: #E8F5E9;
-        border-left: 5px solid var(--verde);
-        color: var(--verde-oscuro);
-    }
-    .stInfo {
-        background-color: #FFF3E0;
-        border-left: 5px solid var(--naranja);
-        color: #E65100;
-    }
-
-    /* Expanders (catálogo de servicios) */
+    /* Expanders (headers verdes, texto negro) */
     .streamlit-expanderHeader {
-        background-color: #E8F5E9;
+        background-color: #E8F5E9 !important;
         color: var(--verde-oscuro) !important;
         font-weight: bold;
-        border-radius: 8px;
+        border-radius: 8px !important;
     }
-        /* Lista de servicios en negro */
     .streamlit-expanderContent p,
     .streamlit-expanderContent li,
     .streamlit-expanderContent ul,
     [data-testid="stExpander"] details p,
-    [data-testid="stExpander"] details li {
-        color: #000000 !important;
-    }
-
-    /* Asegurar texto negro en todo el contenido principal */
-    .stApp [data-testid="stMarkdownContainer"] p {
-        color: #1a1a1a;
-    }
-     .stApp [data-testid="stMarkdownContainer"] *,
-    .stApp p,
-    .stApp div {
+    [data-testid="stExpander"] details li,
+    [data-testid="stExpander"] label,
+    [data-testid="stExpander"] input,
+    [data-testid="stExpander"] textarea,
+    [data-testid="stExpander"] select,
+    [data-testid="stExpander"] span,
+    [data-testid="stExpander"] div {
         color: #1a1a1a !important;
     }
 
-    /* Asegurar que los marcadores (bullets) también sean negros */
-    .stApp ul li,
-    .stApp ol li {
-        color: #1a1a1a !important;
-    }
-        /* Excepción: texto negro en inputs y placeholders */
-    .stApp input,
-    .stApp textarea,
-    .stApp [data-testid="stTextInput"] input,
-    .stApp [data-testid="stTextInput"] label,
-    .streamlit-expanderContent input,
-    .streamlit-expanderContent textarea {
-        color: #000000 !important;
+    /* Inputs y selects con fondo BLANCO y texto NEGRO */
+    [data-testid="stExpander"] input,
+    [data-testid="stExpander"] textarea,
+    [data-testid="stExpander"] select,
+    [data-testid="stExpander"] > div > div,
+    [data-testid="stExpander"] div[data-baseweb="select"],
+    [data-testid="stExpander"] div[data-baseweb="input"] {
+        background-color: white !important;
     }
 
-    /* Placeholder (texto gris claro dentro del input) */
-    .stApp input::placeholder,
-    .stApp textarea::placeholder {
-        color: #666666 !important;
+    /* Texto del contenido principal en negro */
+    .stApp [data-testid="stMarkdownContainer"] * {
+        color: #1a1a1a !important;
     }
-        /* Placeholder específico */
-    [data-testid="stTextInput"] input::placeholder {
+    .stApp p, .stApp div, .stApp li {
+        color: #1a1a1a !important;
+    }
+
+    /* Placeholder gris */
+    input::placeholder, textarea::placeholder {
         color: #888888 !important;
     }
-    /* Forzar fondo blanco y texto negro en inputs y labels del contenido */
-    .stApp [data-testid="stTextInput"],
-    .stApp [data-testid="stNumberInput"],
-    .stApp [data-testid="stSelectbox"],
-    .stApp [data-testid="stTextArea"] {
-        background-color: white !important;
-    }
 
-    .stApp [data-testid="stTextInput"] label,
-    .stApp [data-testid="stNumberInput"] label,
-    .stApp [data-testid="stSelectbox"] label,
-    .stApp [data-testid="stTextArea"] label {
-        color: #1a1a1a !important;
-    }
-
-    .stApp [data-testid="stTextInput"] input,
-    .stApp [data-testid="stNumberInput"] input,
-    .stApp [data-testid="stSelectbox"] select,
-    .stApp [data-testid="stTextArea"] textarea {
-        color: #1a1a1a !important;
-        background-color: white !important;
-    }
-
-    /* Forzar fondo blanco en el contenedor de inputs */
-    .stApp [data-testid="stTextInput"] > div,
-    .stApp [data-testid="stNumberInput"] > div,
-    .stApp [data-testid="stTextArea"] > div {
-        background-color: white !important;
-    }
-
-    /* Texto de placeholder gris */
-    .stApp input::placeholder,
-    .stApp textarea::placeholder {
-        color: #888888 !important;
-    }
-    /* Forzar fondo blanco en selectbox y textinput dentro del contenido */
-    .stApp div[data-baseweb="select"],
-    .stApp div[data-baseweb="input"] {
-        background-color: white !important;
-    }
-
-    /* Forzar texto negro en labels de selectbox y textinput */
-    .stApp label,
-    .stApp [data-testid="stMarkdownContainer"] label {
-        color: #1a1a1a !important;
-    }
-
-    /* Forzar fondo blanco en el contenedor de selectbox */
-    .stApp div[role="listbox"],
-    .stApp div[data-baseweb="select"] > div {
-        background-color: white !important;
-    }
-
-    /* Forzar texto negro en el texto seleccionado dentro del select */
-    .stApp div[data-baseweb="select"] span,
-    .stApp div[data-baseweb="select"] p {
+    /* Selector de opciones del selectbox en negro */
+    [data-testid="stExpander"] div[role="listbox"] span,
+    [data-testid="stExpander"] div[role="option"] {
         color: #1a1a1a !important;
     }
 </style>
